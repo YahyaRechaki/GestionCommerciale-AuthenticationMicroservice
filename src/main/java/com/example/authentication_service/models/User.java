@@ -14,6 +14,16 @@ public class User {
 
     private String password;
 
+    private int verification_code;
+
+    public int getVerification_code() {
+        return verification_code;
+    }
+
+    public void setVerification_code(int verification_code) {
+        this.verification_code = verification_code;
+    }
+
     public User() {
     }
 

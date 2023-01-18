@@ -23,6 +23,10 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    public Integer getCode(String email){
+        User user = userRepository.findUserByEmail(email);
+        return user.getVerification_code();
+    }
     public Optional<User> authenticateUser(String email, String password) {
         User user = userRepository.findByEmail(email).orElse(null);
         if (user == null) {
